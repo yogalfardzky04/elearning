@@ -10,4 +10,9 @@ class VideoRiwayat extends Model
     use HasFactory;
 
     protected $table = "video_riwayat";
+
+    protected $fillable = [
+        'video_id',
+        'user_id'
+    ];
 }

@@ -10,4 +10,9 @@ class VideoFavorite extends Model
     use HasFactory;
 
     protected $table = "video_favorite";
+
+    protected $fillable = [
+        'video_id',
+        'user_id'
+    ];
 }

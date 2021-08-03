@@ -10,4 +10,11 @@ class Modul extends Model
     use HasFactory;
 
     protected $table = "modul";
+
+    protected $fillable = [
+        'user_id',
+        'kategori_id',
+        'nama',
+        'keterangan'
+    ];
 }

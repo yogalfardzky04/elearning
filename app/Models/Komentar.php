@@ -10,4 +10,10 @@ class Komentar extends Model
     use HasFactory;
 
     protected $table = "komentar";
+
+    protected $fillable = [
+    	'video_id',
+    	'user_id',
+        'komentar'
+    ];
 }

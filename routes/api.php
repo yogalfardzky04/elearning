@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/users','App\Http\Controllers\Api\UsersController@index')->name('api.users.index');
 Route::post('/users','App\Http\Controllers\Api\UsersController@store')->name('api.users.store');
 Route::get('/users/{id}','App\Http\Controllers\Api\UsersController@show')->name('api.users.show');
-Route::put('/users/{id}','App\Http\Controllers\Api\UsersController@update')->name('api.users.update');
+Route::post('/users/{id}','App\Http\Controllers\Api\UsersController@update')->name('api.users.update');
 Route::delete('/users/{id}','App\Http\Controllers\Api\UsersController@destroy')->name('api.users.destroy');
 
 Route::get('/modul','App\Http\Controllers\Api\ModulController@index')->name('api.modul.index');
@@ -20,7 +20,7 @@ Route::get('/modul_kategori','App\Http\Controllers\Api\ModulKategoriController@i
 Route::get('/video','App\Http\Controllers\Api\VideoController@index')->name('api.video.index');
 Route::post('/video','App\Http\Controllers\Api\VideoController@store')->name('api.video.store');
 Route::get('/video/{id}','App\Http\Controllers\Api\VideoController@show')->name('api.video.show');
-Route::put('/video/{id}','App\Http\Controllers\Api\VideoController@update')->name('api.video.update');
+Route::post('/video/{id}','App\Http\Controllers\Api\VideoController@update')->name('api.video.update');
 Route::delete('/video/{id}','App\Http\Controllers\Api\VideoController@destroy')->name('api.video.destroy');
 
 Route::get('/video_favorite','App\Http\Controllers\Api\VideoFavoriteController@index')->name('api.video_favorite.index');
@@ -31,3 +31,4 @@ Route::post('/video_riwayat','App\Http\Controllers\Api\VideoRiwayatController@st
 
 Route::get('/komentar','App\Http\Controllers\Api\KomentarController@index')->name('api.komentar.index');
 Route::post('/komentar','App\Http\Controllers\Api\KomentarController@store')->name('api.komentar.store');
+Route::delete('/komentar/{id}','App\Http\Controllers\Api\KomentarController@destroy')->name('api.komentar.destroy');
